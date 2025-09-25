@@ -1,3 +1,4 @@
+```mermaid
 flowchart LR
     subgraph ClientSide ["Client"]
         C(Client)
@@ -33,8 +34,3 @@ flowchart LR
     
     WS1 & WS2 & WS3 -- "세션 정보 조회/갱신" --> Redis
     Scheduler -- "예약 메시지 발행" --> Broker
-    
-    note right of WSCluster
-      - 세션을 Redis에서 공유하므로 Stateless
-      - Sticky Session 불필요
-    end note
